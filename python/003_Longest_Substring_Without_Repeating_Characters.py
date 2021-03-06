@@ -3,7 +3,7 @@ class Solution:
     """
     naive solution
     runtime: O(n^2) 6.51%
-    memory: O(n^2) 27.85%
+    memory: O(n) but the set gets redefined with each iteration of loop so probably more
     """
     # def lengthOfLongestSubstring(self, s: str) -> int:
     #     longest = 0
