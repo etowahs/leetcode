@@ -2,9 +2,10 @@ class Solution:
     """
     Notes:
     merging two sorted arrays takes O(n + m) time, but we want to do better than linear time.
+    Different approaches:
     1. extend one of the lists O(m), sort them O((n+m)log(n+m), get the median O(1)
     2. combine the lists O(m + n), get the median O(1)
-    3.
+    3. split each array into left and right halfs, binary search
     """
 
     """
@@ -27,6 +28,12 @@ class Solution:
     #
     #     return median
 
+    """
+    optimal solution
+    https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2481/Share-my-O(log(min(mn)))-solution-with-explanation
+    runtime: O(log(min(n, m))
+    memory: O(1)
+    """
     def findMedianSortedArrays(self, nums1, nums2):
         m, n = len(nums1), len(nums2)
 
