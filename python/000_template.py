@@ -1,6 +1,6 @@
 class Solution:
     """
-    title
+
     runtime: O()
     memory: O()
     """
@@ -9,4 +9,3 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    assert s.sol(1) == 1
