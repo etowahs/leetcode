@@ -34,5 +34,28 @@ class Solution:
             combined += ''.join(row)
         return combined
 
+    """
+    Optimized version, don't represent whole table including empty spaces, but just letters for each row
+    runtime: O(n)
+    memory: O(n)
+    """
+
+    def convert(self, s, numRows):
+        if numRows == 1 or numRows >= len(s):
+            return s
+
+        table = [''] * numRows
+        step = 1
+        i = 0
+        for c in s:
+            table[i] += c
+            if i == 0:
+                step = 1
+            elif i == numRows - 1:
+                step = -1
+            i += step
+
+        return "".join(table)
+
 if __name__ == '__main__':
     s = Solution()
